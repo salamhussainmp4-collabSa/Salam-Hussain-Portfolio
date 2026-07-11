@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TrendingUp, Plus, CheckCircle2, Award, Zap, Sparkles, Instagram, Youtube, Image, ArrowRight } from 'lucide-react';
-import { caseStudies, processSteps } from '../data';
+import { caseStudies, processSteps, contactConfig } from '../data';
 // @ts-ignore
 import instagramReelStrategyImg from '../assets/images/instagram_reel_strategy.png';
 // @ts-ignore
@@ -222,6 +222,21 @@ export default function Results() {
               </div>
             </div>
 
+          </div>
+
+          {/* Centered CTA button for Work with me (Calendly) */}
+          <div className="mt-12 flex justify-center">
+            <a
+              id="cta-work-with-me"
+              href={contactConfig.calendlyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative px-6 py-3 rounded-full text-xs font-mono tracking-wider uppercase font-bold transition-all duration-300 bg-gradient-to-r from-[#4F46E5] to-[#7C3AED] hover:from-[#7C3AED] hover:to-[#06B6D4] text-white shadow-[0_0_15px_rgba(124,58,237,0.15)] hover:shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 overflow-hidden"
+            >
+              <span className="absolute inset-0 w-full h-full bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+              Work with me
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-[#06B6D4]" />
+            </a>
           </div>
         </div>
 
